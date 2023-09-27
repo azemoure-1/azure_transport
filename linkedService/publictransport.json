@@ -1,0 +1,13 @@
+{
+	"name": "publictransport",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-451773365032434.14.azuredatabricks.net",
+			"existingClusterId": "0927-072813-yqyxlp84",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDIyRUQzNkYwLUQ5QkItNDk3Ri1CMEFFLUNFQjg5OTU3MTE3M19mMzdiMDFmYy1kNDZiLTQwNmQtODFkNy03NjM3OGZlOTQ3NTMiDQp9"
+		}
+	}
+}
