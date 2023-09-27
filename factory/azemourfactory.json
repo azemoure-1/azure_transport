@@ -1,0 +1,9 @@
+{
+	"name": "azemourfactory",
+	"location": "francecentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3aba65d5-700f-4fa0-984f-2290fa51f47e",
+		"tenantId": "a2e466aa-4f86-4545-b5b8-97da7c8febf3"
+	}
+}
