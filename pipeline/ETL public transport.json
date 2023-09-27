@@ -1,0 +1,82 @@
+{
+	"name": "ETL public transport",
+	"properties": {
+		"activities": [
+			{
+				"name": "data generation",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/aazemour.ext@simplonformations.onmicrosoft.com/generation des donnne"
+				},
+				"linkedServiceName": {
+					"referenceName": "publictransport",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "transformation",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "data generation",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/aazemour.ext@simplonformations.onmicrosoft.com/Batch Processing"
+				},
+				"linkedServiceName": {
+					"referenceName": "publictransport",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "archivage",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "transformation",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/aazemour.ext@simplonformations.onmicrosoft.com/Archivage des Données"
+				},
+				"linkedServiceName": {
+					"referenceName": "publictransport",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
