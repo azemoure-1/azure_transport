@@ -35,4 +35,4 @@
 
 - **Cas d'Utilisation** : Analyse des retards et des tendances de passagers.
 - **Directives d'Utilisation** : Utilisez ces données pour comprendre les flux de passagers et les retards des transports publics.
-- **Précautions** : Veuillez noter que les retards sont catégorisés en groupes pour faciliter l'analyse, mais veillez à interpréter ces catégories en fonction du contexte.
+- **Précautions** : les retards sont catégorisés en groupes pour faciliter l'analyse.
